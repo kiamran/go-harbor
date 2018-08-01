@@ -81,6 +81,16 @@ type tagDetail struct {
 	Author        string    `json:"author"`
 	Created       time.Time `json:"created"`
 	Config        *cfg      `json:"config"`
+	Labels []struct {
+		ID           int       `json:"id"`
+		Name         string    `json:"name"`
+		Description  string    `json:"description"`
+		Color        string    `json:"color"`
+		Scope        string    `json:"scope"`
+		ProjectID    int       `json:"project_id"`
+		CreationTime time.Time `json:"creation_time"`
+		UpdateTime   time.Time `json:"update_time"`
+	} `json:"labels"`	
 }
 
 type Signature struct {
