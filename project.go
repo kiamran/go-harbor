@@ -170,7 +170,7 @@ func (s *ProjectsService) DeleteProject(pid int64) (*gorequest.Response, []error
 func (s *ProjectsService) GetProjectLogByID(pid int64, opt ListLogOptions) ([]AccessLog, *gorequest.Response, []error) {
 	var accessLog []AccessLog
 	resp, _, errs := s.client.
-		NewRequest(gorequest.GET, fmt.Sprintf("projects/%d", pid)).
+		NewRequest(gorequest.GET, fmt.Sprintf("projects/%d/logs", pid)).
 		Query(opt).
 		EndStruct(&accessLog)
 	return accessLog, &resp, errs
