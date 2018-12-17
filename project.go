@@ -62,12 +62,12 @@ type ListProjectsOptions struct {
 // access logs.
 type ListLogOptions struct {
 	ListOptions
-	Username   string     `url:"username,omitempty"`        // the operator's username of the log
-	Repository string     `url:"repository,omitempty"`      // repository name
-	Tag        string     `url:"tag,omitempty"`             // tag name
-	Operations []string   `url:"operation,omitempty"`       // operations
-	BeginTime  *time.Time `url:"begin_timestamp,omitempty"` // the time after which the operation is done
-	EndTime    *time.Time `url:"end_timestamp,omitempty"`   // the time before which the operation is doen
+	Username   string     `json:"username,omitempty"`        // the operator's username of the log
+	Repository string     `json:"repository,omitempty"`      // repository name
+	Tag        string     `json:"tag,omitempty"`             // tag name
+	Operations []string   `json:"operation,omitempty"`       // operations
+	BeginTime  *time.Time `json:"begin_timestamp,omitempty"` // the time after which the operation is done
+	EndTime    *time.Time `json:"end_timestamp,omitempty"`   // the time before which the operation is doen
 }
 
 type MemberRequest struct {
